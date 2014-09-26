@@ -5,14 +5,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string-array name="titles">
+    <string-array name="chapters">
         <item>Activities</item>
         <item>Services</item>
         <item>Content Providers</item>
         <item>Intents</item>
     </string-array>
 
-    <string-array name="descriptions">
+    <string-array name="description">
         <item>An Activity is an application component that provides a screen with which users can interact in order to do something, such as dial the phone, take a photo, send an email, or view a map.</item>
         <item>A Service is an application component that can perform long-running operations in the background and does not provide a user interface.</item>
         <item>Content providers manage access to a structured set of data. They encapsulate the data, and provide mechanisms for defining data security.</item>

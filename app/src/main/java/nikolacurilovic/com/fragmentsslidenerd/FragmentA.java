@@ -10,32 +10,36 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.lang.reflect.Array;
+
 /**
  * Created by Nikola on 14.09.2014..
  */
-public class FragmentA extends Fragment implements AdapterView.OnItemClickListener{
+public class FragmentA extends Fragment implements AdapterView.OnItemClickListener {
 
     ListView list;
     Communicator communicator;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_a, container, false);
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        communicator = (Communicator) getActivity();
-        list = (ListView) getActivity().findViewById(R.id.listView);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.titles, android.R.layout.simple_list_item_1);
+        View view = inflater.inflate(R.layout.fragment_a, container, false);
+        list = (ListView) view.findViewById(R.id.listView);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.chapters, android.R.layout.simple_list_item_1);
         list.setAdapter(adapter);
         list.setOnItemClickListener(this);
+        return view;
     }
 
+    public void setCommunicator(Communicator communicator){
+        this.communicator = communicator;
+    }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-        communicator.respod(i);
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        communicator.respond(position);
+    }
+
+    public interface Communicator{
+        public void respond(int index);
     }
 }
