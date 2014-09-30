@@ -7,13 +7,13 @@
     android:orientation="vertical">
 
 
-    <ListView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Fragment A"
+        android:id="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>

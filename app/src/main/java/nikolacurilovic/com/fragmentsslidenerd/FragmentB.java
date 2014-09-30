@@ -16,18 +16,12 @@ import org.w3c.dom.Text;
  */
 public class FragmentB extends Fragment {
 
-    TextView text;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_b, container, false);
-        text = (TextView) view.findViewById(R.id.textView);
         return view;
     }
 
-    public void changeData(int index){
-       String[] descriptions = getResources().getStringArray(R.array.description);
-       text.setText(descriptions[index]);
-    }
 
 }
