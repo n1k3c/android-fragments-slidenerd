@@ -29,6 +29,7 @@ public class ActivityMain extends Activity {
         FragmentA f1 = new FragmentA();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(R.id.group, f1, "A");
+        transaction.addToBackStack("addA");
         transaction.commit();
     }
 
@@ -37,6 +38,7 @@ public class ActivityMain extends Activity {
         FragmentTransaction transaction = manager.beginTransaction();
         if(f1 != null){
             transaction.remove(f1);
+            transaction.addToBackStack("removeA");
             transaction.commit();
         }else {
             Log.d("Error", "Else condition");
@@ -47,6 +49,7 @@ public class ActivityMain extends Activity {
         FragmentB f2 = new FragmentB();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.group, f2, "B");
+        transaction.addToBackStack("replaceAWithB");
         transaction.commit();
     }
 
@@ -54,6 +57,7 @@ public class ActivityMain extends Activity {
         FragmentB f2 = new FragmentB();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(R.id.group, f2, "B");
+        transaction.addToBackStack("addB");
         transaction.commit();
     }
 
@@ -62,6 +66,7 @@ public class ActivityMain extends Activity {
         FragmentTransaction transaction = manager.beginTransaction();
         if(f2 != null) {
             transaction.remove(f2);
+            transaction.addToBackStack("removeB");
             transaction.commit();
         }else {
             Log.d("Error 2", "Else condition");
@@ -72,6 +77,7 @@ public class ActivityMain extends Activity {
         FragmentA f1 = new FragmentA();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.group, f1, "A");
+        transaction.addToBackStack("replaceBWithA");
         transaction.commit();
     }
 
@@ -80,6 +86,7 @@ public class ActivityMain extends Activity {
         FragmentTransaction transaction = manager.beginTransaction();
         if(f1 != null) {
             transaction.attach(f1);
+            transaction.addToBackStack("attachA");
             transaction.commit();
         }
     }
@@ -89,6 +96,7 @@ public class ActivityMain extends Activity {
         FragmentTransaction transaction = manager.beginTransaction();
         if(f1 != null) {
             transaction.detach(f1);
+            transaction.addToBackStack("detachA");
             transaction.commit();
         }
     }
