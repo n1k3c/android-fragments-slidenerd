@@ -11,84 +11,12 @@
     android:id="@+id/my_layout">
 
 
-    <Button
+    <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add A"
-        android:id="@+id/button"
-        android:onClick="addA"
+        android:name="nikolacurilovic.com.fragmentsslidenerd.MyListFragment"
+        android:id="@+id/fragment"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remove A"
-        android:onClick="removeA"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/button"
-        android:layout_toRightOf="@+id/button" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Replace A with B"
-        android:onClick="replaceAWithB"
-        android:id="@+id/button3"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toRightOf="@+id/button2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add B"
-        android:onClick="addB"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button"
-        android:layout_toLeftOf="@+id/button2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remove B"
-        android:onClick="removeB"
-        android:id="@+id/button5"
-        android:layout_below="@+id/button"
-        android:layout_toRightOf="@+id/button4" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Replace B with A"
-        android:onClick="replaceBWithA"
-        android:id="@+id/button6"
-        android:layout_below="@+id/button2"
-        android:layout_toRightOf="@+id/button5" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Attach A"
-        android:onClick="attachA"
-        android:id="@+id/button7"
-        android:layout_below="@+id/button4"
-        android:layout_toLeftOf="@+id/button5" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Detach A"
-        android:onClick="detachA"
-        android:id="@+id/button8"
-        android:layout_alignBottom="@+id/button7"
-        android:layout_toRightOf="@+id/button4" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/button7"
-        android:id="@+id/group">
-    </LinearLayout>
-
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
 </RelativeLayout>
