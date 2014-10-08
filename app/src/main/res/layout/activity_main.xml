@@ -11,12 +11,12 @@
     android:id="@+id/my_layout">
 
 
-    <fragment
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="nikolacurilovic.com.fragmentsslidenerd.MyListFragment"
-        android:id="@+id/fragment"
+        android:text="Show Dialog"
+        android:id="@+id/button"
+        android:onClick="showDialog"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentLeft="true" />
 </RelativeLayout>

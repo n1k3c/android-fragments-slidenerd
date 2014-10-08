@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class ActivityMain extends Activity {
@@ -22,5 +23,11 @@ public class ActivityMain extends Activity {
         setContentView(R.layout.activity_main);
 
     }
+
+    public void showDialog(View v){
+        MyAlert myAlert = new MyAlert();
+        myAlert.show(getFragmentManager(), "My Alert");
+    }
+
 
 }

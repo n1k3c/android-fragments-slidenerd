@@ -6,17 +6,5 @@
     android:layout_height="match_parent"
     android:weightSum="2">
 
-    <fragment
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:name="nikolacurilovic.com.fragmentsslidenerd.FragmentA"
-        android:id="@+id/fragment" />
 
-    <fragment
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:name="nikolacurilovic.com.fragmentsslidenerd.FragmentB"
-        android:id="@+id/fragment2" />
 </LinearLayout>
