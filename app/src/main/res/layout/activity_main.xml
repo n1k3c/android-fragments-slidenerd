@@ -1,22 +1,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BBFF"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ActivityMain"
-    android:background="#00BBFF"
-    android:id="@+id/my_layout">
+    tools:context=".ActivityMain">
 
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Dialog"
-        android:id="@+id/button"
-        android:onClick="showDialog"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true" />
+        android:onClick="showDialog"
+        android:text="Show Dialog" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button"
+        android:onClick="showFragment"
+        android:text="Show fragment" />
+
+    <LinearLayout
+        android:id="@+id/group"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button2"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
 </RelativeLayout>

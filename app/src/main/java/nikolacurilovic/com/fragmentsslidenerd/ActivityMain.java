@@ -27,7 +27,15 @@ public class ActivityMain extends Activity {
     public void showDialog(View v){
         MyAlert myAlert = new MyAlert();
         myAlert.show(getFragmentManager(), "My Alert");
+
     }
 
+    public void showFragment(View v){
+        MyAlert myAlert = new MyAlert();
+        FragmentManager manager =getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.group, myAlert, "My Alert Fragment");
+        transaction.commit();
+    }
 
 }
